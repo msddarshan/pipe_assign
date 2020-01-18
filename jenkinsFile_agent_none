@@ -1,7 +1,7 @@
 pipeline {
 agent none
 stages {
-        stage('Build') {
+        stage('master Build') {
 		 agent { label 'slave' }
             steps {
                 echo 'Building..'
@@ -9,7 +9,7 @@ stages {
 				
             }
         }
-        stage('deploy') {
+        stage('C-slave deploy') {
 			agent { label 'slave' }
             steps {
                 echo 'Deploying to TEST environment..'
