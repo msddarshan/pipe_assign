@@ -16,7 +16,7 @@ stages {
 				sh 'sudo chmod 777 build deploy test; ./deploy'
             }
         }
-        stage('test') {
+        stage('C-slave test') {
 			agent { label 'slave' }
             steps {
                 echo 'Testing....'
